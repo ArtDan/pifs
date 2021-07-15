@@ -14,6 +14,7 @@ For example, if you have Debian try:
 sudo apt-get install autotools-dev
 sudo apt-get install automake
 sudo apt-get install libfuse-dev
+sudo apt-get install pkg-config
 ```
 
 ```sh
@@ -26,12 +27,12 @@ make install
 πfs is dead simple to use:
 
 ```sh
-πfs -o mdd=<metadata directory> <mountpoint>
+πfs -o mdd=<absolute_path_to_metadata_directory> <mountpoint>
 ```
 
 where the _metadata directory_ is where πfs should store its metadata (such
-as filenames or the locations of your files in π) and _mountpoint_ is your
-usual filesystem mountpoint.
+as filenames or the locations of your files in π. This has to be an absolute path!)
+and _mountpoint_ is your usual filesystem mountpoint.
 
 What does π have to do with my data?
 ------------------------------------
